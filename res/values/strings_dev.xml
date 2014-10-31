@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_insert">Dodaj urządzenies</string>
+    <string name="menu_delete">Usuń urządzenie</string>
+    <string name="menu_edit">Edytuj urządzenie</string>
+    <string name="menu_config">Konfiguracja</string>
+    <string name="menu_connect">Połącz</string>
+    <string name="menu_disconnect">Rozłącz</string>
+    <string name="menu_close">Zakończ</string>
+    <string name="add_device_title">Wpisz adres urządzenia, hosta</string>
+    <string name="add_device_address">Adres urządzenia</string>
+    <string name="add_device_name">Nazwa</string>
+    <string name="add_device_port">Port</string>
+    <string name="add_device_ok_button">Zapisz</string>
+    <string name="add_device_cancel_button">Anuluj</string>
+    <string name="dialog_device_type_label">Wybierz sposób komunikacji</string>
+    <string name="dialog_device_type_bth">Bluetooth</string>
+    <string name="dialog_device_type_net">Internet</string>
+    
+    
+    
+</resources>

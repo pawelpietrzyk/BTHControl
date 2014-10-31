@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.pawel.android.BTHControl"
+      android:versionCode="2" android:versionName="1.5">
+    <uses-sdk android:minSdkVersion="7" />    
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission
+        android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <application android:icon="@drawable/volume_blue" android:label="@string/app_name">
+        
+        <provider android:name="digitalisp.android.comunication.RemoteDevicesProvider"
+            android:authorities="digitalisp.android.providers.Comunication" />        
+        <service android:name="digitalisp.android.RemoteCotrol.VolumeControlService">        	
+        </service>   
+        <activity 
+            android:label="@string/app_remote_device_name" 
+            android:name="digitalisp.android.comunication.RemoteDeviceActivity">
+            <intent-filter>
+                <action android:name="android.settings.LOCALE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.digitalisp.device" />
+                
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:label="@string/app_volume_control_name" 
+            android:name="digitalisp.android.RemoteCotrol.VolumeControlActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity android:label="@string/select_device"
+                  android:theme="@android:style/Theme.Dialog"
+                  android:configChanges="orientation|keyboardHidden" 
+                  android:name="com.pawel.android.BTHControl.NewDevices">
+        </activity>
+        
+        <activity 
+            android:label="@string/add_device_title"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden"
+            android:name="digitalisp.android.comunication.RemoteDeviceEditDialog">  
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="digitalisp.android.comunication.bth.CATEGORY_NET" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.digitalisp.device" />
+            </intent-filter>          
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="digitalisp.android.comunication.bth.CATEGORY_NET" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.digitalisp.device"/>
+            </intent-filter>
+        </activity>
+		<activity 
+		    android:name="digitalisp.android.comunication.bth.BTHPickerActivity"
+		    android:label="@string/select_device"
+		    android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.digitalisp.device" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="digitalisp.android.comunication.bth.CATEGORY_BTH" />
+            </intent-filter>
+		    <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.digitalisp.device" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="digitalisp.android.comunication.bth.CATEGORY_BTH" />
+            </intent-filter>
+		</activity>                
+
+    </application>
+</manifest>

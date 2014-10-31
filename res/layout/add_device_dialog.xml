@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="5dip"
+            android:paddingBottom="13dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip">
+
+            <TextView
+                android:id="@+id/device_addr_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_device_address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/device_addr_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:capitalize="none"
+                android:inputType="textEmailAddress"
+                android:minWidth="250dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/device_port_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_device_port"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/device_port_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:capitalize="none"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:minWidth="250dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/device_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_device_name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/device_name_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:capitalize="none"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:minWidth="250dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="54dip"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:paddingTop="4dip" android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/ok_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:minWidth="120dip"
+                android:onClick="handleSave"
+                android:text="@string/add_device_ok_button" />
+
+            <Button
+                android:id="@+id/cance_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ok_button"
+                android:layout_toRightOf="@+id/ok_button"
+                android:minWidth="120dip"
+                android:text="@string/add_device_cancel_button" 
+                android:layout_centerVertical="true" 
+                android:onClick="handleCancel"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

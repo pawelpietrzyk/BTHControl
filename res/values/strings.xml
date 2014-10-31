@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BTHVolume</string>
+    <string name="app_volume_control_name">Lista urządzeń</string>
+    <string name="app_remote_device_name">Konfiguracja urządzeń</string>
+    
+    <!-- VolumeControlActivity -->
+    
+    <string name="button_select">Wybierz urządzenia</string>
+    
+    <!--  NewDevicesActivity -->
+    	<string name="scanning">skanowanie...</string>
+    	<string name="select_device">Wybierz urzadzenie do polaczenia</string>
+    	<string name="none_paired">Nie zapisano urządzeń</string>
+    	<string name="none_found">Nie znaleziono urządzeń</string>
+    	<string name="title_paired_devices">Zapisane urządzenia</string>
+    	<string name="title_other_devices">Inne urządzenia</string>
+    	<string name="button_scan">Poszukaj urządzeń </string>
+    	<string name="btnUP">Głośniej</string>
+    	<string name="btnDOWN">Ciszej</string>
+    	<string name="btnMUTE">Wycisz</string>
+    	<string name="devLABEL">Powiązane urządzenie:</string>
+    	<string name="devVOL">Głośność:</string>
+    	<string name="msg_dev_connected">Połączono</string>
+    	<string name="msg_dev_disconnected">Rozłączono</string>
+    	<string name="msg_dev_mute">Wyciszono</string>
+    	<string name="msg_dev_connecting">Łączenie z urządzeniem </string>
+    	<string name="msg_dev_failed">Próba połączenia nie powiodła się</string>
+    	<string name="msg_dev_lost">Utracono połączenie</string>
+</resources>

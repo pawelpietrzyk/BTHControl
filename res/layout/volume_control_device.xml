@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:longClickable="true"
+    android:onClick="handleConnectClick"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brak"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:clickable="true" android:longClickable="true">
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:background="@drawable/up"
+            android:clickable="true"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip" android:focusableInTouchMode="true"/>
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dip"
+            android:layout_toRightOf="@+id/btnUp"
+            android:background="@drawable/down"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/btnMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dip"
+            android:layout_toRightOf="@+id/btnDown"
+            android:background="@drawable/mute"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/txtDeviceState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/btnMute"
+            android:text="Stan: "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/txtDeviceVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDeviceState"
+            android:layout_toRightOf="@+id/btnMute"
+            android:text="Głośność:"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
+</LinearLayout>
